@@ -2,6 +2,8 @@
 import sys
 from sys import exit
 
+# criando tipos de vinho, quantidade e preços
+
 estoque = [["Vinho tinto", 50, 35.90],
            ["Vinho branco", 20, 29.99],
            ["Vinho rosé", 15, 24.50],
@@ -12,13 +14,13 @@ compras = []
 
 id_compra = 0
 
-
+# criando menu
 while True:
     print("----- MENU PRINCIPAL -----")
     print("1. Menu de Estoque")
     print("2. Menu de Compras")
     menu = int(input("Digite qual menu deseja acessar: "))
-
+# criando menu para escolha estoque
     if menu == 1:
         while True:
             print("\n----- Menu de Estoque -----")
@@ -27,7 +29,7 @@ while True:
             print("3. Registrar Saída")
             print("0. Voltar ao Menu Principal")
             menu2 = int(input("Digite qual opção deseja acessar: "))
-
+# exibindo estoque
             match menu2:
                 case 1:
                     print("----- Estoque -----")
@@ -37,7 +39,7 @@ while True:
                         print(f"{vinho} | {quantidade} | R${preco:.2f}")
 
                     print("----- Fim do Estoque -----\n")
-
+# criando codigo para adicionar produtos no estoque
                 case 2:
                     print("----- Registrar Entrada -----")
                     nome = input("Digite o nome do produto: ")
@@ -59,7 +61,7 @@ while True:
                             break
 
                     print("\n----- Fim do Registro de Entrada -----\n")
-
+# criando codigo para retirada de produtos no estoque 
                 case 3:
                     print("----- Registrar Saída -----")
                     nome = input("Digite o nome do produto: ")
@@ -87,7 +89,7 @@ while True:
                     print("Voltando ao menu principal...\n")
                     break
 
-
+# criando codigo para compra e carrinho
     elif menu == 2:
         while True:
             print("----- Menu de Compras -----")
